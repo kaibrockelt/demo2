@@ -15,7 +15,7 @@ module.exports = {
 
   // Platform specific configs for API
   api: {
-    storeId: "newstore",
+    storeId: "kaihackandslay",
     workspace: 'master',
     environment: 'vtexcommercestable',
     hideUnavailableItems: true,
@@ -25,12 +25,12 @@ module.exports = {
   // Default session
   session: {
     currency: {
-      code: "BRL",
-      symbol: "R$",
+      code: "EUR",
+      symbol: "€",
     },
-    locale: "pt-BR",
-    channel: '{"salesChannel":"1","regionId":""}',
-    country: "BRA",
+    locale: "de-DE",
+    channel: '{"salesChannel":1,"regionId":""}',
+    country: "DEU",
     deliveryMode: null,
     addressType: null,
     postalCode: null,
@@ -46,17 +46,17 @@ module.exports = {
   },
 
   // Production URLs
-  storeUrl: "https://www.fast.store",
-  secureSubdomain: "https://www.fast.store/",
-  checkoutUrl: "https://www.fast.store/checkout",
-  loginUrl: "https://www.fast.store/api/io/login",
-  accountUrl: "https://www.fast.store/api/io/account",
+  storeUrl: "https://kaihackandslay.vtex.app",
+  secureSubdomain: "https://secure.vtexfaststore.com/",
+  checkoutUrl: "https://secure.vtexfaststore.com/checkout",
+  loginUrl: "https://secure.vtexfaststore.com/api/io/login",
+  accountUrl: "https://secure.vtexfaststore.com/api/io/account",
 
   previewRedirects: {
     home: '/',
-    plp: "/headphones",
-    search: "/s?q=Newstore",
-    pdp: "/headphone-white-10000006/p",
+    plp: "/electronics",
+    search: "/s?q=orange",
+    pdp: "/mouse/p",
   },
 
   // Lighthouse CI
@@ -64,8 +64,8 @@ module.exports = {
     server: process.env.BASE_SITE_URL || 'http://localhost:3000',
     pages: {
       home: '/',
-      pdp: "/headphone-white-10000006/p",
-      collection: "/headphones",
+      pdp: "/mouse/p",
+      collection: "/electronics",
     },
   },
 
@@ -73,17 +73,17 @@ module.exports = {
   cypress: {
     pages: {
       home: '/',
-      pdp: "/headphone-white-10000006/p",
-      collection: "/headphones",
-      collection_filtered: "/headphones?category-1=headphones&fuzzy=0&operator=and&facets=category-1%2Cfuzzy%2Coperator&sort=score_desc&page=0",
-      search: "/s?q=Newstore",
+      pdp: "/mouse/p",
+      collection: "/electronics",
+      collection_filtered: "/electronics/?category-1=electronics&marca=faststore&facets=category-1%2Cmarca%27",
+      search: "/s?q=orange",
     },
     browser: 'electron',
   },
 
   analytics: {
     // https://developers.google.com/tag-platform/tag-manager/web#standard_web_page_installation,
-    gtmContainerId: "GTM-1234567",
+    gtmContainerId: "",
   },
 
   experimental: {
@@ -93,7 +93,7 @@ module.exports = {
 
   vtexHeadlessCms: {
     webhookUrls: [
-      "https://newstore.myvtex.com/cms-releases/webhook-releases",
+      "https://kaihackandslay.myvtex.com/cms-releases/webhook-releases",
     ],
   },
 }
